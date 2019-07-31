@@ -1,0 +1,25 @@
+<div class="lowin-wrapper">
+			<div class="lowin-box lowin-login">
+				<div class="lowin-box-inner">
+					<form action="{% url 'front:telephone_login' %}" method="post">
+                    {% csrf_token %}
+						<p>Sign in to continue</p>
+						<div class="lowin-group">
+							<label>手机号<a href="#" class="login-back-link">登录？</a></label>
+                            <input type="text" name="phone" id="phone" autocomplete="current-password" class="lowin-input">
+						</div>
+						<div class="lowin-group password-group">
+							<label>验证码</label>
+							<input type="text" autocomplete="code" name="code" class="lowin-input">
+						</div>
+						<button class="lowin-btn login-btn">
+                            立即登录
+						</button>
+
+						<div class="text-foot">
+							返回登录页 <a href="{% url 'front:login' %}" class="login-link">登录</a>
+						</div>
+					</form>
+				</div>
+			</div>
+        </div>
